@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/buttonbackground.xml" value="0.115" />
+        <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.115" />
+        <entry key="app/src/main/res/drawable/ic_bomb.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_notes.xml" value="0.115" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_quest.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_week.xml" value="0.107" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/content_splash_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_about_us.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/game_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/game_items_layout.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/game_list_fragment.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/history_items_layout.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/history_list_fragment.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/splash_fragment.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/weekly_game_fragment.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/menu/arrow_menu.xml" value="0.22604166666666667" />
+        <entry key="app/src/main/res/menu/game_list_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.107" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.107" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_gameListFragment"
+            app:destination="@id/gameListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_historyListFragment"
+            app:destination="@id/historyListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_weeklyGameFragment"
+            app:destination="@id/weeklyGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.GameFragment"
+        android:label="GameFragment" >
+        <argument
+            android:name="arg_game"
+            app:argType="com.mmspring.sudoku.model.Game"/>
+        <action
+            android:id="@+id/action_gameFragment_to_historyListFragment"
+            app:destination="@id/historyListFragment"
+            app:popUpTo="@id/gameListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.GameListFragment"
+        android:label="game_list_fragment"
+        tools:layout="@layout/game_list_fragment" >
+        <action
+            android:id="@+id/action_gameListFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyListFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.HistoryListFragment"
+        android:label="HistoryListFragment" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/weeklyGameFragment"
+        android:name="com.mmspring.sudoku.ui.fragment.WeeklyGameFragment"
+        android:label="WeeklyGameFragment" >
+        <argument
+            android:name="arg_game"
+            app:argType="com.mmspring.sudoku.model.Game"/>
+    </fragment>
+</navigation>

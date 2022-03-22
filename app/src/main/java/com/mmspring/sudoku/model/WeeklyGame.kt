@@ -1,0 +1,16 @@
+package com.mmspring.sudoku.model
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "weekly_game")
+class WeeklyGame(
+    @PrimaryKey(autoGenerate = true) var id:Int = 0,
+    @ColumnInfo(name="gameQuiz") val quiz:String,
+    @ColumnInfo(name="solution") val solution:String,
+    @ColumnInfo(name="currentState") val currentState:String,
+    @ColumnInfo(name="totalTimes") val totalTimes:Long
+) {
+
+}

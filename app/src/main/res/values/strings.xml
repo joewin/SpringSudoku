@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Spring Sudoku</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="custom_game">Custom Game</string>
+    <string name="stats">Stats</string>
+    <string name="weekly">Weekly Game</string>
+    <string name="about_us">About Us</string>
+    <string name="very_easy">Very Easy</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="hints">HINTS</string>
+    <string name="prefer">Preference</string>
+    <string name="init_stop_watch_value">00:00</string>
+    <string name="about_us_details">
+        Spring Sudoku is an Open Sourced Sudoku App. \n
+        I created this app for learning purpose. \n
+        The UI design is based on this tutorial and source code \n
+        https://www.youtube.com/watch?v=o6P05m0E9z4&amp;list=PLJSII25WrAz72NhnBitybKMMX0_f1UEym \n
+        https://github.com/patrickfeltes/sudoku-android-kotlin/tree/tutorial-7 \n
+        You can see the whole source code here \n
+
+    </string>
+    <string name="get_more_hint">Get more hints</string>
+    <string name="bombs">Booms</string>
+    <string name="arrows">Arrows</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="seven">7</string>
+    <string name="six">6</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="three">3</string>
+    <string name="two">3</string>
+    <string name="one">1</string>
+    <string name="row">Row</string>
+    <string name="col">Column</string>
+
+</resources>
