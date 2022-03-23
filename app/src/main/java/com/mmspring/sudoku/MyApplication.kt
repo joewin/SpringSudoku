@@ -11,12 +11,12 @@ class MyApplication :Application(){
     private val uiScope = CoroutineScope(Dispatchers.IO)
     override fun onCreate() {
         super.onCreate()
-        val storeManager = DataStoreManager(this)
+      /*  val storeManager = DataStoreManager(this)
         Log.i("Calling","calling this")
         uiScope.launch {
            storeManager.updateArrows(5)
            storeManager.updateBombs(5)
            storeManager.updateHints(5)
-       }
+       }*/
     }
 }

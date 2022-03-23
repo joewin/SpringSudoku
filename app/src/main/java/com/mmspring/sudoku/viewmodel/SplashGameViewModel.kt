@@ -8,7 +8,7 @@ import com.mmspring.sudoku.repository.GameRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class SplashGameViewModel(application: Application):ViewModel() {
+class SplashGameViewModel(private val application: Application):ViewModel() {
     private val database = AppDatabase.getDatabase(application)
     private val repository = GameRepository(database)
     private var _loading = MutableLiveData<Boolean>()
@@ -20,9 +20,10 @@ class SplashGameViewModel(application: Application):ViewModel() {
     }
     private fun checkDBandInsert(){
         viewModelScope.launch(){
-            repository.checkAndInsert()
+            repository.checkAndInsert(application)
             Log.i("Loading","loading")
             _loading.value = false
+
         }
     }
     fun doneNavigation(){

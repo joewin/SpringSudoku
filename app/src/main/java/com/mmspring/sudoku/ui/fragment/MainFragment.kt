@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.mmspring.sudoku.R
 import com.mmspring.sudoku.databinding.MainFragmentBinding
-import com.mmspring.sudoku.util.Constant
 import com.mmspring.sudoku.viewmodel.MainViewModel
 import com.mmspring.sudoku.viewmodel.MainViewModelFactory
 
@@ -76,7 +75,10 @@ class MainFragment : Fragment() {
         }
         return binding.root
     }
-
+    override fun onResume() {
+        super.onResume()
+        viewModel.initiaingData()
+    }
 
 
 }

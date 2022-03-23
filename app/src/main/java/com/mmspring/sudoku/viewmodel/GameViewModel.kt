@@ -105,7 +105,26 @@ class GameViewModel (private val application: Application,private val game:Game)
         viewModelScope.launch {
             _bombs.value?.let {
                 _bombs.value = bombs.value?.minus(1)
-                DataStoreManager(application).updateArrows( _bombs.value!!)
+                DataStoreManager(application).updateBombs( _bombs.value!!)
+            }
+        }
+    }
+    fun addRewards(){
+        val rnds = (0..2).random()
+        viewModelScope.launch {
+            when(rnds){
+                0 -> {
+                    _hints.value = hints.value?.plus(1)
+                    DataStoreManager(application).updateHints( _hints.value!!)
+                }
+                1 -> {
+                    _arrows.value = arrows.value?.plus(1)
+                    DataStoreManager(application).updateArrows( _arrows.value!!)
+                }
+                2 -> {
+                    _bombs.value = bombs.value?.plus(1)
+                    DataStoreManager(application).updateBombs( _bombs.value!!)
+                }
             }
         }
     }
@@ -114,7 +133,6 @@ class GameViewModel (private val application: Application,private val game:Game)
             gridSol.add(ws.code-48)
         }
         for(w in original){
-            Log.d("D",w.toString())
             gridCells.add(w.code-48)
         }
         for(gs in gameState){
@@ -154,7 +172,6 @@ class GameViewModel (private val application: Application,private val game:Game)
     }
     //update the selected cell and adding value
     fun updateSelectedCell(row: Int, col: Int) {
-        Log.i("Update","Update")
         val cell = board.getCell(row, col)
         if (!cell.isStartingCell) {
             selectedRow = row

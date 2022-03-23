@@ -1,5 +1,6 @@
 package com.mmspring.sudoku.repository
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
@@ -7,23 +8,29 @@ import com.apps4mm.quiz4myanmar.data.AppDatabase
 import com.mmspring.sudoku.model.Game
 import com.mmspring.sudoku.model.GameHistory
 import com.mmspring.sudoku.model.WeeklyGame
+import com.mmspring.sudoku.util.DataStoreManager
 import com.mmspring.sudoku.util.Utility
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
 class GameRepository(private val myDb:AppDatabase) {
 
-    suspend fun checkAndInsert(){
-        if(myDb.gameDao().getCount() == 0){
+    suspend fun checkAndInsert(context: Context){
+        if(myDb.gameDao().getCount() == 0) {
             addVeryEasy()
             addEasy()
             addMedium()
             addHard()
             addWeeklyGame()
-        }
+            DataStoreManager(context).updateArrows(5)
+            DataStoreManager(context).updateBombs(5)
+            DataStoreManager(context).updateHints(5)
+            }
     }
+
     // game manipulating
     suspend fun saveGame(game:Game){
         myDb.gameDao().update(game)

@@ -9,7 +9,7 @@ import com.mmspring.sudoku.util.DataStoreManager
 import com.mmspring.sudoku.util.Utility
 import kotlinx.coroutines.launch
 
-class MainViewModel(application: Application) : ViewModel() {
+class MainViewModel(private val application: Application) : ViewModel() {
     private val repository = GameRepository(AppDatabase.getDatabase(application))
     private var _gameLiveData = MutableLiveData<Game?>()
     val gameLiveData : LiveData<Game?>
@@ -20,11 +20,14 @@ class MainViewModel(application: Application) : ViewModel() {
         get() = _hintLiveData
     private var _bombLiveData = MutableLiveData<Int>()
     val bombLiveData :LiveData<Int>
-        get() = _hintLiveData
+        get() = _bombLiveData
     private var _arrowLiveData = MutableLiveData<Int>()
     val arrowLiveData :LiveData<Int>
-        get() = _hintLiveData
+        get() = _arrowLiveData
     init {
+        initiaingData()
+    }
+    fun initiaingData(){
         viewModelScope.launch {
             _hintLiveData.value = DataStoreManager(application).readHints()
             _bombLiveData.value = DataStoreManager(application).readBombs()

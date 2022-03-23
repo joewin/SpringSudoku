@@ -52,24 +52,9 @@ class HistoryListFragment : Fragment() {
                     viewModel.doneNavigating()
             }
         }
-        setHasOptionsMenu(true)
+
         return binding.root
     }
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.game_list_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        viewModel.apply {
-            when (item.itemId) {
-                R.id.show_very_easy -> onFilterChange(QueryFilter.VERYEASY)
-                R.id.show_easy -> onFilterChange(QueryFilter.EASY)
-                R.id.show_medium -> onFilterChange(QueryFilter.MEDIUM)
-                R.id.show_hard -> onFilterChange(QueryFilter.HARD)
-                else -> onFilterChange(QueryFilter.VERYEASY)
-            }
-            binding.progressBar.visibility = View.VISIBLE
-        }
-        return true
-    }
+
+
 }

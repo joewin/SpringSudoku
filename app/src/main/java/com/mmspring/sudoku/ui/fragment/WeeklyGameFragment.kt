@@ -86,7 +86,7 @@ class WeeklyGameFragment : Fragment() , BoardView.OnTouchListener {
 
                 viewModel.handleInput(index + 1)
                 if(checkWin()){
-                    Toast.makeText(requireContext(),"Congrats!! Winner winner", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(),"Congrats!! You win this week quiz", Toast.LENGTH_LONG).show()
                     goTohistory()
                 }
                 //Log.d("Input", (index + 1).toString())
@@ -146,7 +146,7 @@ class WeeklyGameFragment : Fragment() , BoardView.OnTouchListener {
                 doArrow(view)
 
                 if (checkWin()) {
-                    Toast.makeText(requireContext(), "Congrats!! Winner winner", Toast.LENGTH_LONG)
+                    Toast.makeText(requireContext(), "Congrats!! You win this week quiz", Toast.LENGTH_LONG)
                         .show()
                     goTohistory()
                 }

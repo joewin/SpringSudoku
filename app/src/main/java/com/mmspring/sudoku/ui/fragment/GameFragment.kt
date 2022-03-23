@@ -80,7 +80,6 @@ class GameFragment : Fragment(), BoardView.OnTouchListener {
 
                 viewModel.handleInput(index + 1)
                 if(checkWin()){
-                    Toast.makeText(requireContext(),"Congrats!! Winner winner", Toast.LENGTH_LONG).show()
                     goTohistory()
                 }
                 //Log.d("Input", (index + 1).toString())
@@ -129,8 +128,6 @@ class GameFragment : Fragment(), BoardView.OnTouchListener {
                 viewModel.handleHint()
 
                 if (checkWin()) {
-                    Toast.makeText(requireContext(), "Congrats!! Winner winner", Toast.LENGTH_LONG)
-                        .show()
                     goTohistory()
                     //back to home
                 }
@@ -143,6 +140,8 @@ class GameFragment : Fragment(), BoardView.OnTouchListener {
         catch(e:Exception) { }
     }
     private fun goTohistory(){
+        viewModel.addRewards()
+        Toast.makeText(requireContext(),"Congrats!!you won and you get award!", Toast.LENGTH_LONG).show()
         findNavController().navigate(GameFragmentDirections.actionGameFragmentToHistoryListFragment())
     }
     private fun checkWin():Boolean{

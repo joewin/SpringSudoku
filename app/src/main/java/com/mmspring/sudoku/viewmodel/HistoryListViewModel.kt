@@ -17,6 +17,7 @@ class HistoryListViewModel(application: Application): ViewModel()  {
             QueryFilter.EASY -> repository.getGameHistoryByLevel(2).asLiveData()
             QueryFilter.MEDIUM -> repository.getGameHistoryByLevel(3).asLiveData()
             QueryFilter.HARD -> repository.getGameHistoryByLevel(4).asLiveData()
+            QueryFilter.WEEKLY -> repository.getGameHistoryByLevel(0).asLiveData()
             else ->  repository.getGameHistoryByLevel(1).asLiveData()
         }
     }

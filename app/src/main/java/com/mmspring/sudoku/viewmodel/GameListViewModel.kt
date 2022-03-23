@@ -6,7 +6,7 @@ import com.apps4mm.quiz4myanmar.data.AppDatabase
 import com.mmspring.sudoku.model.Game
 import com.mmspring.sudoku.repository.GameRepository
 
-enum class QueryFilter{VERYEASY,EASY,MEDIUM,HARD}
+enum class QueryFilter{VERYEASY,EASY,MEDIUM,HARD,WEEKLY}
 class GameListViewModel(application: Application): ViewModel()  {
     
     private val dbFilter = MutableLiveData(QueryFilter.VERYEASY)
